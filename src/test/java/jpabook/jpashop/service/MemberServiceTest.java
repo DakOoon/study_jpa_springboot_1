@@ -41,10 +41,10 @@ class MemberServiceTest {
 
         // when
         memberService.join(memberA);
-
-        // then
         assertThatThrownBy(() -> memberService.join(memberB))
                 .isExactlyInstanceOf(IllegalStateException.class)
                 .hasMessageContaining("이미 존재하는 회원입니다.");
+
+        // then
     }
 }
